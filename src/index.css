@@ -2,3 +2,17 @@
   padding: 0;
   margin: 0;
 }
+
+.navbar{
+  width: 100%;
+  height: 100px;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nb-element{
+  display: flex;
+  align-items: center;
+}
