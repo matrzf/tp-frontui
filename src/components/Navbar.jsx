@@ -14,6 +14,9 @@ export default function Navbar(){
         <Link to={home ? "/BackOffice" : "/"} onClick={toggleHome}>
           {home ? "Back office" : "Home"}
         </Link>
+        <Link to="/Login">
+          Login
+        </Link>
       </div>
     </div>
   )

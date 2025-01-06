@@ -7,6 +7,8 @@ import Navbar from './components/Navbar'
 
 import Home from './views/Home'
 import BackOffice from './views/BackOffice'
+import Login from './views/Login/Login' 
+
 
 function App() {
 
@@ -24,6 +26,10 @@ function App() {
             <Route
               path="/BackOffice"
               element={<BackOffice />}
+            />
+            <Route
+              path="/Login"
+              element={<Login />} 
             />
           </Routes>
         </div>
