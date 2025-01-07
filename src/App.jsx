@@ -8,6 +8,7 @@ import Navbar from './components/Navbar'
 import Home from './views/Home'
 import BackOffice from './views/BackOffice'
 import Login from './views/Login/Login' 
+import Register from './views/Register/Register'
 
 
 function App() {
@@ -30,6 +31,10 @@ function App() {
             <Route
               path="/Login"
               element={<Login />} 
+            />
+            <Route
+              path="/Register"
+              element={<Register />} 
             />
           </Routes>
         </div>
