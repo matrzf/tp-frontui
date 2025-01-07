@@ -4,8 +4,9 @@
     margin: auto;
     margin-top: 50px;
     width: 600px;
-    background: rgb(195, 42, 195);
     padding-bottom: 30px;
+    border: 2px solid black; 
+    border-radius: 15px;
 }
 
 .header {
