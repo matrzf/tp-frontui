@@ -6,10 +6,9 @@ import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
 import Navbar from './components/Navbar'
 
 import Home from './views/Home'
-import BackOffice from './views/BackOffice'
-import Login from './views/Login/Login' 
-import Register from './views/Register/Register'
-
+import Login from './views/Login'
+import Register from './views/Register'
+import Games from './views/Games'
 
 function App() {
 
@@ -25,16 +24,16 @@ function App() {
               element={<Home />}
             />
             <Route
-              path="/BackOffice"
-              element={<BackOffice />}
+              path="/login"
+              element={<Login />}
             />
             <Route
-              path="/Login"
-              element={<Login />} 
+              path="/register"
+              element={<Register />}
             />
             <Route
-              path="/Register"
-              element={<Register />} 
+              path="/games/:id"
+              element={<Games />}
             />
           </Routes>
         </div>
