@@ -19,24 +19,38 @@ function Register() {
   };
 
   return (
-    <div>
-      <h2 className="h2">Register</h2>
+    <div className='body-register'>
+      <div className="register-container">
+        <div className="form-register">
+      <h2 className="h2-register">Register</h2>
       <form onSubmit={handleSubmit}>
+        <div className="input-register">
         <label>
-          Username:
+          <p className='title-register'>Username:</p> 
           <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
         </label>
+        </div>
         <br />
+        <div className="input-register">
         <label>
-          Password:
+          <p className='title-register'>Password:</p> 
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </label>
+        </div>
         <br />
-        <button type="submit">Register</button>
+        <div className="term-conditions">
+          <label><input type='checkbox' />I agree to the term and the conditions</label>
+        </div>
+        <br />
+        <button className='button-register' type="submit">Register</button>
       </form>
+      <div className="login-link">
       <p>
-        Already have an account? <Link to="/login">Login here</Link>
+        Already have an account? <Link to="/login" className='link-login'>Login here</Link>
       </p>
+      </div>
+        </div>
+      </div>
     </div>
   );
 }

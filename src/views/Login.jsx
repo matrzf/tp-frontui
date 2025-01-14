@@ -19,22 +19,32 @@ function Login() {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <div className='body-login'>
+      <div className="login-container">
+        <div className="form-login">
+      <h2 className='h2-login'>Login</h2>
       <form onSubmit={handleSubmit}>
+        <div className='input-login'>
         <label>
-          Username:
+          <p className='title-input'>Username:</p> 
           <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
         </label>
+        </div>
         <br />
+        <div className='input-login'>
         <label>
-          Password:
+          <p className='title-input'>Password:</p>
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </label>
+        </div>
         <br />
-        <button type="submit">Login</button>
+        <button className='button-login' type="submit">Login</button>
       </form>
-      <p>Don't have an account? <Link to="/register">Register here</Link></p>
+      <div className="register-link">
+      <p>Don't have an account? <Link to="/register" className='link-register'>Register here</Link></p>
+      </div> 
+        </div>
+      </div>
     </div>
   );
 }
