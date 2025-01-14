@@ -37,7 +37,7 @@ function Home() {
           Authorization: `Bearer ${token}`,
         },
       });
-      navigate(`/games/${response.data._id}`);
+      navigate(`/games/${response.data._id}`); 
     } catch (error) {
       console.error('Error starting new game:', error);
     }
@@ -48,13 +48,13 @@ function Home() {
 
   return (
     <div className='body-home'>
-      <div className="home-container">
+      <div className='home-container'>
       <h1 className='h1-home'>Home Page</h1>
-      <div className="button-game">
-      <button className='button-new-game' onClick={startNewGame}>New Game</button>
+      <div className='button-game'>
+      <button className='button-new-game' onClick={startNewGame}>New Game</button> 
       </div>
-      <div className="list-of-matches">
-      <h3 className='title-list-of-matches'>List of Matches :</h3>
+      <div className='list-of-matches'>
+      <h3 className='title-list-of-matches'>List of Matches</h3>
       <ul>
         {matches.map((match) => (
           <li key={match._id}>
@@ -63,7 +63,7 @@ function Home() {
           </li>
         ))}
       </ul>
-      </div>
+      </div> 
       </div> 
     </div>
   );
