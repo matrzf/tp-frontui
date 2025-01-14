@@ -47,18 +47,24 @@ function Home() {
   if (error) return <p>{error}</p>;
 
   return (
-    <div>
-      <h2>Home Page</h2>
-      <button onClick={startNewGame}>New Game</button>
-      <h3>List of Matches</h3>
+    <div className='body-home'>
+      <div className="home-container">
+      <h1 className='h1-home'>Home Page</h1>
+      <div className="button-game">
+      <button className='button-new-game' onClick={startNewGame}>New Game</button>
+      </div>
+      <div className="list-of-matches">
+      <h3 className='title-list-of-matches'>List of Matches :</h3>
       <ul>
         {matches.map((match) => (
           <li key={match._id}>
             Match ID: {match._id}, Player 1: {match.user1?.username}, Player 2: {match.user2?.username || 'Waiting for player'}
-            <button onClick={() => navigate(`/games/${match._id}`)}>Play</button>
+            <button className='button-play' onClick={() => navigate(`/games/${match._id}`)}>Play</button>
           </li>
         ))}
       </ul>
+      </div>
+      </div> 
     </div>
   );
 }

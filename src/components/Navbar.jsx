@@ -25,11 +25,11 @@ export default function Navbar() {
 
   return (
     <div className="navbar">
-      <div className="nb-element">
+      <div className="nb-element1">
         <h1>Final Project</h1>
       </div>
-      <div className="nb-element">
-        {isLoggedIn && <button onClick={handleLogout}>Déconnecter</button>}
+      <div className="nb-element2">
+        {isLoggedIn && <button className='button-log-out' onClick={handleLogout}>Log out</button>}
       </div>
     </div>
   );

@@ -43,19 +43,27 @@ function Games() {
   if (!match) return <p>Loading match details...</p>;
 
   return (
-    <div>
-      <h2>Game for Match ID: {id}</h2>
-      <h3>Player 1: {match.user1?.username}, Player 2: {match.user2?.username || 'Waiting for player'}</h3>
-      <label>
-        Choose your move:
-        <select value={move} onChange={(e) => setMove(e.target.value)}>
-          <option value="">Select move</option>
-          <option value="rock">Rock</option>
-          <option value="paper">Paper</option>
-          <option value="scissors">Scissors</option>
-        </select>
-      </label>
-      <button onClick={() => playTurn(match.turns.length)}>Play Turn</button>
+    <div className='body-games'>
+      <div className="games-container">
+      <div className="game-match-id">
+        <h2 className='game-match-id'>Game for Match ID: {id}</h2>
+      </div>
+      <div className="list-players">
+        <h3>Player 1: {match.user1?.username}, Player 2: {match.user2?.username || 'Waiting for player'}</h3>
+      </div>
+      <div className="move">
+        <label className='choose-your-move'>
+          Choose your move:
+          <select className='select' value={move} onChange={(e) => setMove(e.target.value)}>
+            <option value="">Select move</option>
+            <option value="rock">Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissors">Scissors</option>
+          </select>
+        </label>
+        <button className='button-play-turn' onClick={() => playTurn(match.turns.length)}>Play Turn</button>
+      </div>
+      </div>
     </div>
   );
 }
